@@ -12,10 +12,10 @@
     <Description>Headless Chrome .NET API and support for AOT compilation</Description>
     <PackageId>PuppeteerAot</PackageId>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <PackageVersion>16.0.0</PackageVersion>
-    <ReleaseVersion>16.0.0</ReleaseVersion>
-    <AssemblyVersion>16.0.0</AssemblyVersion>
-    <FileVersion>16.0.0</FileVersion>
+    <PackageVersion>16.1.0</PackageVersion>
+    <ReleaseVersion>16.1.0</ReleaseVersion>
+    <AssemblyVersion>16.1.0</AssemblyVersion>
+    <FileVersion>16.1.0</FileVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
     <DebugType>embedded</DebugType>

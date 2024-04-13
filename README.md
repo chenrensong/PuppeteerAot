@@ -4,11 +4,11 @@
 
 [NugetUrl]: https://www.nuget.org/packages/PuppeteerAot/
 
-PuppeteerAot is fork from [PuppeteerAot](https://github.com/hardkoded/puppeteer-sharp) and support for AOT compilation. 
+PuppeteerAot is fork from [PuppeteerSharp](https://github.com/hardkoded/puppeteer-sharp) and support for AOT compilation. 
 
 ## Why do we create this library?
 
-* Using PupperSharp and publishing AOT in net 8.0 environment, the program cannot execute well.
+* I am developing The Net8.0 application attempted to reference PuppeterSharp Or Microsoft PlayWright, programs cannot be executed in AOT environment. The purpose of developing this library is very simple, which is to use Puppeter or PlayWright under Aot,
 
 ## What modifications have been made?
 
