@@ -19,13 +19,13 @@ try
             Headless = false,
         }).ConfigureAwait(false)))
     {
-        await using var page = await browser.NewPageAsync();
-        await page.GoToAsync("https://www.baidu.com");
-        await page.ScreenshotAsync(Path.Combine(AppContext.BaseDirectory, "1.jpg"));
-        //await Helper.Run(browser, _url, _cookie, _jsCode, 3000, "今天天气怎么样", ((s) =>
-        //{
-        //    Console.WriteLine(s);
-        //}));
+        //await using var page = await browser.NewPageAsync();
+        //await page.GoToAsync("https://www.baidu.com");
+        //await page.ScreenshotAsync(Path.Combine(AppContext.BaseDirectory, "1.jpg"));
+        await Helper.Run(browser, _url, _cookie, _jsCode, 3000, "今天天气怎么样", ((s) =>
+        {
+            Console.WriteLine(s);
+        }));
     }
 }
 catch (Exception ex)

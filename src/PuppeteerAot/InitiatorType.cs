@@ -1,10 +1,13 @@
+using PuppeteerAot.Helpers.Json;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace PuppeteerAot;
 
 /// <summary>
 /// Type of the <see cref="Initiator"/>.
 /// </summary>
+[JsonConverter(typeof(JsonStringEnumMemberConverter<InitiatorType>))]
 public enum InitiatorType
 {
     /// <summary>

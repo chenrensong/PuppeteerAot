@@ -14,29 +14,36 @@ namespace SampleAot
 
             await using var page = await browser.NewPageAsync();
 
-            // 分割 cookie 字符串
-            var cookieItems = cookieString.Split(';');
-
-            foreach (var item in cookieItems)
+            try
             {
-                // 移除任何开始或结束的空白字符
-                var cookie = item.Trim();
+                // 分割 cookie 字符串
+                var cookieItems = cookieString.Split(';');
 
-                // 分割 cookie 名称和值
-                var cookieParts = cookie.Split('=');
-                var cookieName = cookieParts[0].Trim();
-                var cookieValue = cookieParts[1].Trim();
-
-                // 创建 cookie 对象
-                var cookieParam = new CookieParam
+                foreach (var item in cookieItems)
                 {
-                    Name = cookieName,
-                    Value = cookieValue,
-                    Domain = "metaso.cn" // 根据实际情况设置正确的域
-                };
+                    // 移除任何开始或结束的空白字符
+                    var cookie = item.Trim();
 
-                // 设置 cookie
-                await page.SetCookieAsync(cookieParam);
+                    // 分割 cookie 名称和值
+                    var cookieParts = cookie.Split('=');
+                    var cookieName = cookieParts[0].Trim();
+                    var cookieValue = cookieParts[1].Trim();
+
+                    // 创建 cookie 对象
+                    var cookieParam = new CookieParam
+                    {
+                        Name = cookieName,
+                        Value = cookieValue,
+                        Domain = "metaso.cn" // 根据实际情况设置正确的域
+                    };
+
+                    // 设置 cookie
+                    await page.SetCookieAsync(cookieParam);
+                }
+            }
+            catch (Exception ex)
+            {
+
             }
 
 

@@ -20,11 +20,16 @@
 //  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  * SOFTWARE.
 
+using PuppeteerAot.Helpers.Json;
+using PuppeteerAot.Input;
+using System.Text.Json.Serialization;
+
 namespace PuppeteerAot;
 
 /// <summary>
 /// Represents the cookie's 'Priority' status.
 /// </summary>
+[JsonConverter(typeof(JsonStringEnumMemberConverter<CookiePriority>))]
 public enum CookiePriority
 {
     /// <summary>

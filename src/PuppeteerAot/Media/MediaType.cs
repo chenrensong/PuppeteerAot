@@ -1,10 +1,14 @@
+using PuppeteerAot.Cdp.Messaging;
+using PuppeteerAot.Helpers.Json;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace PuppeteerAot.Media
 {
     /// <summary>
     /// Media type.
     /// </summary>
+    [JsonConverter(typeof(JsonStringEnumMemberConverter<MediaType>))]
     public enum MediaType
     {
         /// <summary>

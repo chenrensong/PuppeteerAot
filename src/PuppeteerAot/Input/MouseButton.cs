@@ -1,4 +1,6 @@
+using PuppeteerAot.Helpers.Json;
 using System;
+using System.Text.Json.Serialization;
 
 namespace PuppeteerAot.Input
 {
@@ -7,6 +9,7 @@ namespace PuppeteerAot.Input
     /// </summary>
     [Flags]
 #pragma warning disable CA1714 // Flags enums should have plural names. We don't want to break compatibility for this
+    [JsonConverter(typeof(JsonStringEnumMemberConverter<MouseButton>))]
     public enum MouseButton
 #pragma warning restore CA1714 // Flags enums should have plural names
     {

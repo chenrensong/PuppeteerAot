@@ -1,4 +1,7 @@
+using PuppeteerAot.Cdp.Messaging;
+using PuppeteerAot.Helpers.Json;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace PuppeteerAot
 {
@@ -6,6 +9,7 @@ namespace PuppeteerAot
     /// Resource type.
     /// </summary>
     /// <seealso cref="IRequest.ResourceType"/>
+    [JsonConverter(typeof(JsonStringEnumMemberConverter<ResourceType>))]
     public enum ResourceType
     {
         /// <summary>

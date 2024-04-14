@@ -1,10 +1,14 @@
+using PuppeteerAot.Cdp.Messaging;
+using PuppeteerAot.Helpers.Json;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace PuppeteerAot
 {
     /// <summary>
     /// Console type used on <see cref="ConsoleMessage"/>.
     /// </summary>
+    [JsonConverter(typeof(JsonStringEnumMemberConverter<ConsoleType>))]
     public enum ConsoleType
     {
         /// <summary>

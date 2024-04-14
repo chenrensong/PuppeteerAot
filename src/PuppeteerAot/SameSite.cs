@@ -1,8 +1,12 @@
+using PuppeteerAot.Helpers.Json;
+using System.Text.Json.Serialization;
+
 namespace PuppeteerAot
 {
     /// <summary>
     /// SameSite values in cookies.
     /// </summary>
+    [JsonConverter(typeof(JsonStringEnumMemberConverter<SameSite>))]
     public enum SameSite
     {
         /// <summary>

@@ -1,9 +1,9 @@
+using Microsoft.Extensions.Logging;
+using PuppeteerAot.Cdp.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
-using PuppeteerAot.Cdp.Messaging;
 
 namespace PuppeteerAot
 {

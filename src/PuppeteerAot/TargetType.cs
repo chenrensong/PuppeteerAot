@@ -1,10 +1,13 @@
+using PuppeteerAot.Helpers.Json;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace PuppeteerAot
 {
     /// <summary>
     /// Target type.
     /// </summary>
+    [JsonConverter(typeof(JsonStringEnumMemberConverter<TargetType>))]
     public enum TargetType
     {
         /// <summary>

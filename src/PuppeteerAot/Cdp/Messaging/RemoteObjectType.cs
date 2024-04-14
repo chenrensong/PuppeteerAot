@@ -1,8 +1,12 @@
+using PuppeteerAot.Helpers.Json;
+using System.Text.Json.Serialization;
+
 namespace PuppeteerAot.Cdp.Messaging
 {
     /// <summary>
     /// Remote object type.
     /// </summary>
+    [JsonConverter(typeof(JsonStringEnumMemberConverter<RemoteObjectType>))]
     public enum RemoteObjectType
     {
         /// <summary>

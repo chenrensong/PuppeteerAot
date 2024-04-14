@@ -1,4 +1,7 @@
+using PuppeteerAot.Cdp.Messaging;
+using PuppeteerAot.Helpers.Json;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace PuppeteerAot
 {
@@ -6,6 +9,7 @@ namespace PuppeteerAot
     /// Override permission.
     /// </summary>
     /// <seealso cref="IBrowserContext.OverridePermissionsAsync(string, System.Collections.Generic.IEnumerable{OverridePermission})"/>
+    [JsonConverter(typeof(JsonStringEnumMemberConverter<OverridePermission>))]
     public enum OverridePermission
     {
         /// <summary>
